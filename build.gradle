@@ -13,3 +13,16 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+File propertyFile = file "src/main/resources/cStM.properties"
+Properties props = new Properties()
+props.load(propertyFile.newDataInputStream())
+
+String verr = props.getProperty('proDir')
+println( verr )
+
+props.setProperty('proDir', project.projectDir as String)
+props.setProperty('reps', project.repositories as String)
+props.setProperty('defTasks', project.defaultTasks as String)
+props.setProperty('logger', project.logger as String)
+props.store(propertyFile.newWriter(), null)

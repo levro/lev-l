@@ -13,5 +13,14 @@ public class OneM {
 
         System.out.println( lst);
 
+        ArrayList<String> lst1 = new ArrayList<>();
+        lst1.add( Addon.multi( "a", 1 ) );
+        lst1.add( Addon.multi( "", 2 ) );
+        lst1.add( Addon.multi( "|", 6 ) );
+        lst1.add( Addon.multi( "()", 4 ) );
+        lst1.add( Addon.multi( "a", 0 ) );
+        lst1.add( Addon.cat());
+
+        System.out.println( lst1);
     }
 }
