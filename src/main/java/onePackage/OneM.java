@@ -19,7 +19,8 @@ public class OneM {
         lst1.add( Addon.multi( "|", 6 ) );
         lst1.add( Addon.multi( "()", 4 ) );
         lst1.add( Addon.multi( "a", 0 ) );
-        lst1.add( Addon.cat());
+        lst1.add( Addon.cat() );
+        lst1.add( String.valueOf( Addon.ten() ) );
 
         System.out.println( lst1);
     }

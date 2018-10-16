@@ -23,5 +23,8 @@ public class Addon {
         return String.valueOf( val ) + " x " + str;
     }
 
+    public static int ten(){
+        return 10;
+    }
 
 }
