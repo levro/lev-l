@@ -25,6 +25,8 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
+logger.debug('DEBUG logging level')
+
 File propertyFile = file "src/main/resources/cStM.properties"
 Properties props = new Properties()
 props.load(propertyFile.newDataInputStream())
@@ -37,3 +39,8 @@ props.setProperty('reps', project.repositories as String)
 props.setProperty('defTasks', project.defaultTasks as String)
 props.setProperty('logger', project.logger as String)
 props.store(propertyFile.newWriter(), null)
+
+task copyOut(type: Copy) {
+    from "src/test/resorces/out.log"
+    into "src/test/arch"
+}
