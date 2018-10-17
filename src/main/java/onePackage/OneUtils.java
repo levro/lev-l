@@ -1,6 +1,6 @@
 package onePackage;
 
-public class Addon {
+public class OneUtils {
     public static String varCat = "Barss";
     public static int amount = 2;
 
@@ -25,6 +25,10 @@ public class Addon {
 
     public static int ten(){
         return 10;
+    }
+
+    public static int sCount( String str, int val ){
+        return str.length() * val;
     }
 
 }
