@@ -27,6 +27,8 @@ public class OneUtils {
         return 10;
     }
 
+    public static int sAmount() { return amount; }
+
     public static int sCount( String str, int val ){
         return str.length() * val;
     }

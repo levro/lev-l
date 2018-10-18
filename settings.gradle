@@ -1,2 +1,3 @@
 rootProject.name = 'lev-l'
+include 'testModule'
 
